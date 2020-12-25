@@ -17,10 +17,10 @@
 
 // This definition must be placed before the #include <M5Stack.h>
 // #define M5STACK_MPU6886 
-#define M5STACK_MPU9250 
+// #define M5STACK_MPU9250 
 // #define M5STACK_MPU6050
 // #define M5STACK_200Q
-#include <M5Stack.h>
+#include <M5Core2.h>
 // install the library:
 // pio lib install "M5Stack"
 
@@ -79,7 +79,7 @@ TFT_eSprite img = TFT_eSprite(&M5.Lcd);
 
 void setup(void) {
   M5.begin();
-  M5.Power.begin();
+  // M5.Power.begin();
   M5.IMU.Init();
   // int the starting position of all snowflakes
   for(int i=0; i < flake_max; i++){
